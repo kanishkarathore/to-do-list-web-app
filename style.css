@@ -1,0 +1,300 @@
+/* ---------- Global Styles ---------- */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+  color: #111;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* ---------- Container ---------- */
+.container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+/* ---------- Header ---------- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+/* ---------- Dark Mode Button ---------- */
+#themeToggle {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #222;
+  color: white;
+  cursor: pointer;
+}
+
+#themeToggle:hover {
+  background-color: #444;
+}
+
+/* ---------- Input Row ---------- */
+.task-input,
+.search-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.task-input input,
+.task-input select,
+.task-input button,
+.search-row input {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.task-input input[type="text"] {
+  flex: 2;
+}
+
+.task-input input[type="date"] {
+  flex: 1.2;
+}
+
+.task-input select {
+  flex: 1;
+}
+
+.task-input button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  flex: 0.5;
+}
+
+.task-input button:hover {
+  background-color: #218838;
+}
+
+/* ---------- Search Input ---------- */
+#searchInput {
+  flex: 1 1 100%;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* ---------- Filter Buttons ---------- */
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.filters button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.filters button:hover {
+  background-color: #0056b3;
+}
+
+/* ---------- Task List ---------- */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background-color: #f8f9fa;
+  margin-bottom: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+li.done {
+  text-decoration: line-through;
+  color: #888;
+  background-color: #e9ecef;
+}
+
+li span {
+  flex: 1;
+}
+
+/* ---------- Buttons ---------- */
+li button {
+  margin-left: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+}
+
+li button:hover {
+  background-color: #0056b3;
+}
+
+/* ---------- Priority Labels ---------- */
+.priority {
+  font-size: 0.8rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.priority.Low {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.priority.Medium {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.priority.High {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* ---------- Countdown ---------- */
+.countdown {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.overdue {
+  font-weight: bold;
+  color: red;
+}
+
+/* ---------- Dark Mode ---------- */
+body.dark {
+  background-color: #121212;
+  color: #eee;
+}
+
+body.dark .container {
+  background-color: #1f1f1f;
+}
+
+body.dark input,
+body.dark select,
+body.dark button {
+  background-color: #333;
+  color: #eee;
+  border: 1px solid #444;
+}
+
+body.dark li {
+  background-color: #2a2a2a;
+}
+
+body.dark li.done {
+  background-color: #3a3a3a;
+  color: #aaa;
+}
+
+body.dark .priority.Low {
+  background-color: #1f3f1f;
+  color: #aaf0aa;
+}
+
+body.dark .priority.Medium {
+  background-color: #665c2e;
+  color: #ffe684;
+}
+
+body.dark .priority.High {
+  background-color: #5c1d1d;
+  color: #ffaaaa;
+}
+
+body.dark .countdown,
+body.dark .overdue {
+  color: #ffbaba;
+}
+
+/* ---------- Logout ---------- */
+.logout {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.logout button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.logout button:hover {
+  background-color: #c82333;
+}
+
+/* ---------- Login Page ---------- */
+.login-container {
+  max-width: 400px;
+  margin: 5rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.6rem 0;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.login-container button {
+  padding: 0.6rem 1.2rem;
+  margin: 0.5rem 0.3rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background-color: #0056b3;
+}

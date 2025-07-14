@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>To-Do List Web App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>To-Do List ✅</h1>
+      <button id="themeToggle" class="dark-mode-btn">🌙 Dark Mode</button>
+    </div>
+
+    <div class="search-row">
+      <input type="text" id="searchInput" placeholder="🔍 Search tasks..." />
+    </div>
+
+    <div class="task-input">
+      <input type="text" id="taskText" placeholder="Enter task..." />
+      <input type="date" id="taskDate" />
+      <select id="taskPriority">
+        <option value="Low">Low</option>
+        <option value="Medium" selected>Medium</option>
+        <option value="High">High</option>
+      </select>
+      <button onclick="addTask()">➕</button>
+    </div>
+
+    <div class="filters">
+      <button onclick="setFilter('all')">All</button>
+      <button onclick="setFilter('pending')">Pending</button>
+      <button onclick="setFilter('completed')">Completed</button>
+    </div>
+
+    <ul id="taskList"></ul>
+
+    <div class="logout">
+      <button onclick="logout()">🔓 Logout</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
